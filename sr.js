@@ -20,10 +20,13 @@ var SpotifyRequest = function(username, password, readyCallback) {
 
 SpotifyRequest.prototype.request = function(dweet) {
 	var instance = this;
-	var callback = function(track) {
-		if (track.isLoaded === true) {
+	var callback = function(reqType, answer) {
+		if (answer.isLoaded === true) {
 			console.log("Sending Answer.");
-			instance.dweetio.sendData('jme-spotify-answer', track);
+			instance.dweetio.sendData('jme-spotify-answer', {
+				"type": reqType,
+				"answer": answer
+			});
 		}
 	};
 	if (dweet.content['type'] &&
@@ -31,9 +34,9 @@ SpotifyRequest.prototype.request = function(dweet) {
 	{
 		console.log("Request type: " + dweet.content.type + ".");
 		if (dweet.content.type == "name-track") {
-			this.loadTrack(dweet.content.uri, callback);
+			this.loadTrack(dweet.content.uri, function(track) {callback(dweet.content.type, track);});
 		} else if (dweet.content.type == "search-track") {
-			this.searchTrack(dweet.content.search, callback);
+			this.searchTrack(dweet.content.search, function(track) {callback(dweet.content.type, track);});
 		}
 	}
 };
