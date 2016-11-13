@@ -2,7 +2,7 @@
   "name": "spotify-request",
   "version": "0.0.1",
   "description": "A small Spotify API proxy server.",
-  "author": "Joe Eaves <joe.eaves@shadowacre.ltd>",
+  "author": "Joe Eaves <jinux@alluha.net>",
   "contributors": [],
   "repository": {
     "type": "git",

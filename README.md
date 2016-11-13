@@ -11,13 +11,15 @@ Currently the following requests are supported:
 There are two ways to use this library:
 
 * Hosting a socket.io API server
-	```node
+
+```
 let spotreq    = require('spotify-request');
 let api_server = new spotreq.APIServer(3000, 'Spotify WEB API KEY', 'Corresponding secret');
 ```
 
 * Access to the underlying Spotify API proxy (SpotifyRequest)
-	```node
+
+```
 let spotreq  = require('spotify-request');
 let proxy    = new spotreq.SpotifyRequest('Spotify WEB API KEY', 'Corresponding secret');
 ```
