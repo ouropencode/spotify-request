@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+'use strict';
 
 var SpotifyWebApi = require('spotify-web-api-node');
 

@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+'use strict';
 
 let express  = require('express');
 let http     = require('http');

@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+'use strict';'
 
 const APIServer      = require('./src/APIServer');
 const SpotifyRequest = require('./src/SpotifyRequest');
