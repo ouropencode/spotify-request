@@ -1,4 +1,4 @@
-'use strict';'
+'use strict';
 
 const APIServer      = require('./src/APIServer');
 const SpotifyRequest = require('./src/SpotifyRequest');
