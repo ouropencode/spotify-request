@@ -1,6 +1,6 @@
 {
   "name": "spotify-request",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A small Spotify API proxy server.",
   "author": "Joe Eaves <jinux@alluha.net>",
   "contributors": [],
