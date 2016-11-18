@@ -1,14 +1,12 @@
 'use strict';
 
-let express  = require('express');
 let http     = require('http');
 let socketio = require('socket.io');
 let spotireq = require('./SpotifyRequest');
 
 class APIServer {
 	constructor(port, apikey, apisecret) {
-		this.app       = express();
-		this.server    = http.Server(this.app);
+		this.server    = http.Server();
 		this.io_server = socketio(this.server);
 		this.spotify   = new spotireq(apikey, apisecret);
 
